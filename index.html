@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,7 +191,6 @@
         white-space: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
-        border-bottom: 1px solid var(--border-color);
         position: relative;
         z-index: 10;
         transition: all 0.3s var(--transition-smooth);
@@ -292,18 +292,12 @@
         background: linear-gradient(135deg, var(--hover-color) 0%, var(--pressed-color) 100%);
         color: var(--text-color);
         transform: translateY(-1px);
-        box-shadow: 
-            0 4px 16px var(--shadow-color),
-            0 0 20px var(--glow-color);
         z-index: 2;
     }
 
     .tab.active::before {
         opacity: 1;
-        background: linear-gradient(135deg, 
-            var(--accent-color) 0%, 
-            transparent 50%, 
-            var(--gradient-end) 100%);
+
     }
 
     .tab:hover:not(.active) {
@@ -522,7 +516,7 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        max-width: 320px;
+        min-width: 180px;
         font-weight: 450;
         letter-spacing: -0.01em;
         overflow: hidden;
@@ -908,7 +902,7 @@ function applyTheme(themeData) {
         }
 
         class Tab {
-            constructor(content = `print("Voly on top!")`, name = `Script ${scriptCounter++}`, id = `tab-${Date.now()}`) {
+            constructor(content = `print("Flow on top!")`, name = `Script ${scriptCounter++}`, id = `tab-${Date.now()}`) {
                 this.id = id;
                 this.name = name;
                 this.content = content;
@@ -1241,7 +1235,7 @@ function applyTheme(themeData) {
 
             window.addEventListener('load', () => {
                 setupMessageHandlers();
-                setTimeout(() => showToast('Voly loaded!', 'success'), 1500);
+                setTimeout(() => showToast('Flow loaded!', 'success'), 1500);
             });
         });
     </script>
